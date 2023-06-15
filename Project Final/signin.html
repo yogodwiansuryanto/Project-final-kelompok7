@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="md:flex md:px-4 md:gap-4">
+    <div class="container">
+        <nav>
+            <i class="px-8 py-8 m-0 text-3xl cursor-pointer fa-solid fa-less-than"></i>
+        </nav>
+        <main class="px-8 m-0">
+            <img src="asset/images/logo.png" alt="Logo" class="w-40 m-auto my-5">
+            <div>
+                <h1 class="mb-8 text-3xl">Masuk</h1>
+                <form action="Login" class="flex flex-col">
+                    <label for="email" class="mb-2 font-light text-gray-600">Email Address</label>
+                    <input type="email" id="email" class="mb-2 border-b-2 outline-none focus:border-b-2 focus:border-blue-400" required>
+                    <label for="password" class="mb-2 font-light text-gray-600">Password</label>
+                    <input type="password" id="password" class="border-b-2 outline-none focus:border-b-2 focus:border-blue-400" required>
+                    <a href="#" class="font-light text-blue-600">Lupa kata sandi?</a>
+                    <button type="submit" class="p-2 my-8 text-gray-600 bg-gray-200 rounded-full">Masuk</button>
+                </form>
+                <p class="mb-8 text-center">Belum memiliki akun? <span><a href="/signup.html" class="font-semibold text-blue-600">Register di sini</a></span></p>
+            </div>
+        </main>
+    </div>
+    <img src="asset/images/signin-hero.png" alt="signin-hero" class="hidden w-1/2 h-screen md:block">
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Book1</title>
+    <style>
+        .box-container {
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            background: white;
+        }
+
+        .box {
+            width: 350px;
+            align-content: flex-start;
+            background: #fff;
+            border: 1px solid black;
+            position: relative;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .box .image {
+            padding: 10px;
+            background: #eee;
+            text-align: center;
+        }
+
+        .box .image img {
+            height: 300px;
+            width: 250px;
+        }
+
+        .box .info .title {
+            height: 90px;
+            padding: 10px;
+            color: #666;
+            font-size: 20px;
+        }
+
+        .layout {
+            display: flex;
+            width: 80%;
+            height: 60vh;
+            background-color: #eee;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+        }
+
+        .content {
+            width: 80%;
+            padding-top: 5vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content_head {
+            text-align: justify;
+            height: 10vh;
+            padding-left: 20px;
+        }
+
+        .content_text {
+            width: 90%;
+            height: 60%;
+            background-color: antiquewhite;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .content_btn {
+            outline: auto;
+            width: 90px;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: aqua;
+        }
+
+        .btn_back {
+            outline: auto;
+            width: 90px;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: aqua;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <div class="box">
+            <div class="image">
+                <img src="asset/images/img1.jpg">
+            </div>
+            <div class="info">
+                <h2 class="title">Negeri Para Bedebah</h2>
+                <div class="subInfo">
+                    <div class="price">Rp. 150.000</div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_head">
+                <h2>Negeri Para Bedebah</h2>
+                <h3>By : Tere Liye || Gramedia Pustaka Utama</h3>
+            </div>
+            <div class="content_text">
+                <p>Kisah berawal dari Thomas sebagai seorang konsultan keuangan yang sangat terkenal. Keahlian Thomas
+                    dalam bidang pekerjaannya ini membuat dirinya bahkan sering diundang menjadi pembicara dalam
+                    berbagai kesempatan seperti talk show dan seminar hingga luar negeri.
+                    Thomas bisa dibilang merupakan salah satu figure paling berpengaruh dalam bidang perekonomian hingga
+                    mampu mendirikan firma konsultannya bernama Thomas & Co. Ketenaran Thomas membuat banyak orang ingin
+                    mengulik sisi dari dirinya yang amat misterius dan latar belakangnya yang gelap.</p>
+            </div>
+            <div class="content_btn">
+                Buy now
+            </div>
+            <a href="/">
+                <button class="btn_back">Back</button>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>
