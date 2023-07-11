@@ -1217,3 +1217,50 @@ a:hover.back-to-top {
     /* end of extra pages */
 }
 /* end of min-width 1200px */
+
+/******************************/
+/*     Custom Style HSK 7     */
+/******************************/
+
+.btn-solid-sec {
+    display: inline-block;
+    padding: 1.375rem 2.25rem 1.375rem 2.25rem;
+    border: 1px solid #eb427e;
+    border-radius: 32px;
+    background-color: #eb427e;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 0;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-solid-sec:hover {
+    border: 1px solid #eb427e;
+    background-color: transparent;
+    color: #eb427e; /* needs to stay here because of the color property of a tag */
+    text-decoration: none;
+  }
+
+.link-menu:hover {
+    color: #eb427e;
+  }
+
+.link-menu-active {
+    color: #eb427e;
+}
+
+.link-border-b:hover {
+    color: #eb427e;
+    border-bottom: solid 1px;
+    border-color: #eb427e;
+    margin-bottom: -1px;
+}
+
+.link-border-b-active {
+    color: #eb427e;
+    border-bottom: solid 1px;
+    border-color: #eb427e;
+    margin-bottom: -1px;
+}

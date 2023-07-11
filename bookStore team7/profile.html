@@ -2,10 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Pavo is a mobile app Tailwind CSS HTML template created to help you present benefits, features and information about mobile apps in order to convince visitors to download them" />
+    <meta
+      name="description"
+      content="Pavo is a mobile app Tailwind CSS HTML template created to help you present benefits, features and information about mobile apps in order to convince visitors to download them"
+    />
     <meta name="author" content="Your name" />
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
@@ -29,9 +35,15 @@
 
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link href="css/fontawesome-all.css" rel="stylesheet" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link href="css/swiper.css" rel="stylesheet" />
     <link href="css/magnific-popup.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
@@ -42,38 +54,58 @@
   <body data-spy="scroll" data-target=".fixed-top">
     <!-- Navigation -->
     <nav class="navbar fixed-top">
-      <div class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap">
+      <div
+        class="container sm:px-4 lg:px-8 flex flex-wrap items-center justify-between lg:flex-nowrap"
+      >
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <!-- <a class="text-gray-800 font-semibold text-3xl leading-4 no-underline page-scroll" href="index.html">Pavo</a> -->
 
         <!-- Image Logo -->
-        <a class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline" href="index.html">
+        <a
+          class="inline-block mr-4 py-0.5 text-xl whitespace-nowrap hover:no-underline focus:no-underline"
+          href="index.html"
+        >
           <img src="images/logo.svg" alt="alternative" class="h-8" />
         </a>
 
-        <button class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400" type="button" data-toggle="offcanvas">
-          <span class="navbar-toggler-icon inline-block w-8 h-8 align-middle"></span>
+        <button
+          class="background-transparent rounded text-xl leading-none hover:no-underline focus:no-underline lg:hidden lg:text-gray-400"
+          type="button"
+          data-toggle="offcanvas"
+        >
+          <span
+            class="navbar-toggler-icon inline-block w-8 h-8 align-middle"
+          ></span>
         </button>
 
-        <div class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center" id="navbarsExampleDefault">
-          <ul class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row">
+        <div
+          class="navbar-collapse offcanvas-collapse lg:flex lg:flex-grow lg:items-center"
+          id="navbarsExampleDefault"
+        >
+          <ul
+            class="pl-0 mt-3 mb-2 ml-auto flex flex-col list-none lg:mt-0 lg:mb-0 lg:flex-row"
+          >
             <li>
-              <a class="nav-link page-scroll active" href="#header">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link page-scroll" href="./index.html">Home</a>
             </li>
             <li>
-              <a class="nav-link page-scroll" href="#features">Category</a>
+              <a class="nav-link page-scroll" href="./categories.html"
+                >Category</a
+              >
             </li>
             <li>
-              <a class="nav-link page-scroll" href="./profile.html">Profile</a>
+              <a class="nav-link page-scroll active" href="./profile.html"
+                >Profile</a
+              >
             </li>
           </ul>
           <span class="sm:ml-3">
-            <button
-              type="button"
+            <a
+              href="./signin.html"
               class="inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Get Stared
-            </button>
+            </a>
           </span>
         </div>
         <!-- end of navbar-collapse -->
@@ -85,50 +117,103 @@
 
     <main>
       <!-- container -->
-      <div class="container flex flex-col items-center pt-28 mx-auto md:items-start md:flex-row">
+      <div
+        class="container flex flex-col items-center pt-40 lg:pt-32 mx-auto px-4 md:px-8 lg:px-8 lg:items-start lg:flex-row"
+      >
+        <!-- mobile menu -->
+        <div class="fixed top-12 left-0 right-0 z-10 lg:hidden">
+          <div
+            class="container flex justify-center mx-auto px-4 pt-4 md:px-8 lg:px-8"
+            style="background-color: #f1f9fc"
+          >
+            <button
+              type="button"
+              class="w-full py-2 border-b border-gray-300 font-semibold"
+              onclick="showMenuProfileMobile()"
+              id="menuProfileActive"
+            >
+              Menu Profil <span>&#x25BC;</span>
+            </button>
+            <button
+              type="button"
+              class="hidden w-full py-2 border-b border-gray-300 font-semibold"
+              onclick="hideMenuProfileMobile()"
+              id="menuProfileInactive"
+            >
+              Menu Profil <span>&#x25B2;</span>
+            </button>
+          </div>
+        </div>
+        <!-- mobile menu -->
         <!-- menu -->
-        <div class="hidden md:block md:w-1/4">
+        <div
+          class="hidden fixed top-24 left-0 right-0 bottom-0 pt-10 z-10 lg:block lg:pt-0 px-4 md:px-8 lg:px-0 w-full lg:sticky lg:top-24 lg:w-1/4"
+          style="background-color: #f1f9fc"
+          id="menuProfile"
+        >
           <!-- wrapper menu -->
-          <div class="md:pr-8">
+          <div class="lg:pr-8">
             <div>
-              <div class="flex flex-col items-center gap-2 pb-1 border-b border-gray-300">
+              <div
+                class="flex flex-col items-center gap-2 pb-1 border-b border-gray-300"
+              >
                 <img class="w-16 rounded-full" src="./images/avatar.png" />
-                <span class="font-bold text-black">user1234</span>
+                <span class="font-bold text-black">User Satu</span>
               </div>
               <div class="py-2 mb-2 border-b border-gray-300">
-                <div class="flex flex-col">
+                <div class="flex flex-col gap-3">
                   <div>
-                    <button class="w-full link-menu" onclick="goBookmark()" id="btnBookmark">
+                    <button
+                      class="w-full link-menu"
+                      onclick="goBookmark()"
+                      id="btnBookmark"
+                    >
                       <div class="flex justify-between">
-                        <span>Markah Buku</span>
-                        <span>0</span>
+                        <span class="font-semibold">Markah Buku</span>
+                        <span class="font-semibold">0</span>
                       </div>
                     </button>
                   </div>
                   <div>
-                    <button class="w-full link-menu" onclick="goSubscription()" id="btnSubscription">
+                    <button
+                      class="w-full link-menu"
+                      onclick="goSubscription()"
+                      id="btnSubscription"
+                    >
                       <div class="flex justify-between">
-                        <span>Langganan</span>
-                        <span>0</span>
+                        <span class="font-semibold">Langganan</span>
+                        <span class="font-semibold">0</span>
                       </div>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="pb-2 mb-2 border-b border-gray-300">
-              <button class="link-menu-active link-menu" onclick="goSetting()" id="btnSetting">
-                <strong>Profil</strong>
+            <div class="pb-2 mb-2">
+              <button
+                class="link-menu-active link-menu font-semibold"
+                onclick="goSetting()"
+                id="btnSetting"
+              >
+                Profil
               </button>
             </div>
-            <div class="pb-2 mb-2 border-b border-gray-300">
-              <button class="link-menu" onclick="goPasswordSetting()" id="btnPasswordSetting">
-                <strong>Ubah Password</strong>
+            <div class="pb-2 mb-2">
+              <button
+                class="link-menu font-semibold"
+                onclick="goPasswordSetting()"
+                id="btnPasswordSetting"
+              >
+                Ubah Password
               </button>
             </div>
             <div>
-              <button class="link-menu" onclick="goTransaction()" id="btnTransaction">
-                <strong>Riwayat Transaksi</strong>
+              <button
+                class="link-menu font-semibold"
+                onclick="goTransaction()"
+                id="btnTransaction"
+              >
+                Riwayat Transaksi
               </button>
             </div>
           </div>
@@ -136,134 +221,273 @@
         </div>
         <!-- menu end -->
 
-        <!-- TESTING -->
-        <!-- menu mobile-->
-        <div class="w-full bg-red-500 md:hidden">
-          <!-- wrapper menu -->
-          <div class="md:p-2">
-            <div>
-              <div class="flex flex-col items-center gap-2 pb-2 border-b border-gray-300 md:flex-row">
-                <img class="w-16 rounded-full" src="./images/avatar.png" />
-                <span class="font-bold text-black">user1234</span>
-              </div>
-              <div class="py-2 mb-2 border-b border-gray-300">
-                <div class="flex flex-col">
-                  <div class="ml-2">
-                    <button class="w-full link-menu" onclick="goBookmark()" id="btnBookmark">
-                      <div class="flex justify-between">
-                        <span>Markah Buku</span>
-                        <span>0</span>
-                      </div>
-                    </button>
-                  </div>
-                  <div class="ml-2">
-                    <button class="w-full link-menu" onclick="goSubscription()" id="btnSubscription">
-                      <div class="flex justify-between">
-                        <span>Langganan</span>
-                        <span>0</span>
-                      </div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="pb-2 mb-2 border-b border-gray-300">
-              <button class="link-menu-active link-menu" onclick="goSetting()" id="btnSetting">
-                <strong>Profil</strong>
-              </button>
-            </div>
-            <div>
-              <button class="link-menu" onclick="goTransaction()" id="btnTransaction">
-                <strong>Riwayat Transaksi</strong>
-              </button>
-            </div>
-          </div>
-          <!-- wrapper menu end -->
-        </div>
-        <!-- menu mobile end -->
-        <!-- TESTING END -->
-
         <!-- profile contents -->
-        <div class="w-full md:pl-8 md:w-3/4 md:border-l">
+        <div class="w-full lg:pl-8 lg:w-3/4 lg:border-l lg:border-gray-300">
           <!-- profile settings -->
           <div class="w-full active" id="setting">
             <!-- judul -->
-            <h3 class="pb-10 text-center">Profil Pengguna</h3>
+            <h1 class="pb-16 text-center">Profil Pengguna</h1>
             <!-- wrapper profile settings -->
-            <div class="flex flex-col justify-between md:flex-row">
+            <div class="flex flex-col justify-between">
               <!-- profile picture -->
-              <div class="flex flex-col items-center w-full gap-4 md:w-2/5">
-                <div class="w-2/3 pb-2">
-                  <img src="./asset/images/avatar.png" />
+              <div class="flex flex-col items-center w-full gap-4">
+                <div class="w-52">
+                  <img src="./images/avatar.png" />
                 </div>
-                <div class="w-2/3">
-                  <label class="w-full text-center btn-solid-reg">
-                    <input type="file" class="hidden" accept="image/png, image/jpeg" />
-                    <span>Pilih Foto</span>
-                  </label>
-                </div>
-                <div class="w-2/3">
-                  <button class="w-full text-center btn-solid-sec" href="#">Simpan</button>
-                </div>
+                <form>
+                  <div class="flex flex-col justify-center w-64 gap-3">
+                    <label
+                      for="profileImage"
+                      class="w-full text-center text-black font-semibold"
+                    >
+                      Ganti Gambar
+                    </label>
+                    <input
+                      type="file"
+                      class="border"
+                      accept="image/png, image/jpeg"
+                      name="profileImage"
+                      id="profileImage"
+                    />
+                    <div class="flex justify-center mt-2">
+                      <button class="w-3/5 btn-solid-reg" href="#">
+                        Simpan
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
               <!-- profile picture end -->
 
               <!-- profile settings option -->
-              <div class="w-full pt-10 md:pt-0 md:w-3/5">
-                <h5 class="text-center md:text-left">Informasi Pengguna</h5>
+              <div class="w-full mt-8">
                 <div class="py-2 border-b border-gray-300">
-                  <table>
-                    <tr>
-                      <td>Nama</td>
-                      <td>:</td>
-                      <td>
-                        <input class="bg-transparent" type="text" value="user1234" />
-                      </td>
-                      <td><button class="link-menu">Ubah</button></td>
-                    </tr>
-                    <tr>
-                      <td>Tanggal Lahir</td>
-                      <td>:</td>
-                      <td>
-                        <input type="date" value="2001-01-01" id="tanggalLahir" />
-                      </td>
-                      <td><button class="link-menu">Ubah</button></td>
-                    </tr>
-                    <tr>
-                      <td>Jenis Kelamin</td>
-                      <td>:</td>
-                      <td>
-                        <select id="jenisKelamin">
-                          <option value="A">Laki-laki</option>
-                          <option value="B">Perempuan</option>
-                        </select>
-                      </td>
-                      <td><button class="link-menu">Ubah</button></td>
-                    </tr>
-                  </table>
+                  <div>
+                    <span class="text-black font-semibold"> Email </span>
+                  </div>
+                  <div>
+                    <span>user@mail.com</span>
+                  </div>
                 </div>
-                <h5 class="pt-2 text-center md:text-left">Informasi Personal</h5>
-                <div class="py-2">
-                  <table>
-                    <tr>
-                      <td>Email</td>
-                      <td>:</td>
-                      <td><input type="email" value="user@user.com" /></td>
-                      <td><button class="link-menu">Ubah</button></td>
-                    </tr>
-                    <tr>
-                      <td>Nomor Telepon</td>
-                      <td>:</td>
-                      <td><input type="number" value="012345678999" /></td>
-                      <td><button class="link-menu">Ubah</button></td>
-                    </tr>
-                    <tr>
-                      <td>Kata Sandi</td>
-                      <td>:</td>
-                      <td><input type="password" value="user" /></td>
-                      <td><button class="link-menu">Ubah</button></td>
-                    </tr>
-                  </table>
+                <div class="py-2 border-b border-gray-300">
+                  <form>
+                    <div class="flex justify-between">
+                      <div class="flex flex-col">
+                        <label for="inputName" class="text-black font-semibold"
+                          >Nama</label
+                        >
+                        <span id="displayName">User Satu</span>
+                      </div>
+                      <button
+                        type="button"
+                        class="link-menu font-semibold"
+                        onclick="showInputName()"
+                        id="btnShowInputName"
+                      >
+                        Ubah
+                      </button>
+                    </div>
+                    <div class="hidden mt-2" id="displayInputName">
+                      <input
+                        type="text"
+                        name="inputName"
+                        id="inputName"
+                        class="w-full p-2 border rounded-md"
+                        value="User Satu"
+                        onfocus="this.setSelectionRange(this.value.length,this.value.length)"
+                      />
+                      <div class="flex justify-end gap-4 py-4">
+                        <button
+                          type="reset"
+                          class="btn-solid-sec w-1/6"
+                          onclick="hideInputName()"
+                        >
+                          Batal
+                        </button>
+                        <button type="submit" class="btn-solid-reg w-1/6">
+                          Simpan
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="py-2 border-b border-gray-300">
+                  <form>
+                    <div class="flex justify-between">
+                      <div class="flex flex-col">
+                        <label for="inputDate" class="text-black font-semibold"
+                          >Tanggal Lahir</label
+                        >
+                        <span id="displayDate">2001-01-01</span>
+                      </div>
+                      <button
+                        onclick="showInputDate()"
+                        class="link-menu font-semibold"
+                        type="button"
+                        id="btnShowInputDate"
+                      >
+                        Ubah
+                      </button>
+                    </div>
+                    <div class="hidden mt-2" id="displayInputDate">
+                      <input
+                        type="date"
+                        name="inputDate"
+                        id="inputDate"
+                        class="w-full p-2 border rounded-md"
+                        value="2001-01-01"
+                      />
+                      <div class="flex justify-end gap-4 py-4">
+                        <button
+                          type="button"
+                          onclick="hideInputDate()"
+                          class="btn-solid-sec w-1/6"
+                        >
+                          Batal
+                        </button>
+                        <button type="submit" class="btn-solid-reg w-1/6">
+                          Simpan
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="py-2 border-b border-gray-300">
+                  <form>
+                    <div class="flex justify-between">
+                      <div class="flex flex-col">
+                        <label
+                          for="inputPhoneNumber"
+                          class="text-black font-semibold"
+                          >Nomor Telepon</label
+                        >
+                        <span id="displayPhoneNumber">+6281234567891</span>
+                      </div>
+                      <button
+                        type="button"
+                        class="link-menu font-semibold"
+                        onclick="showInputPhoneNumber()"
+                        id="btnShowInputPhoneNumber"
+                      >
+                        Ubah
+                      </button>
+                    </div>
+                    <div class="hidden mt-2" id="displayInputPhoneNumber">
+                      <div class="flex items-center">
+                        <span class="pr-2">+62</span>
+                        <input
+                          type="number"
+                          name="phoneNumber"
+                          id="inputPhoneNumber"
+                          class="flex-grow p-2 border rounded-md"
+                          value="81234567891"
+                        />
+                      </div>
+                      <div class="flex justify-end gap-4 py-4">
+                        <button
+                          onclick="hideInputPhoneNumber()"
+                          type="button"
+                          class="btn-solid-sec w-1/6"
+                        >
+                          Batal
+                        </button>
+                        <button type="submit" class="btn-solid-reg w-1/6">
+                          Simpan
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="py-2 border-b border-gray-300">
+                  <form>
+                    <div class="flex justify-between">
+                      <div class="flex flex-col">
+                        <label
+                          for="inputGender"
+                          class="text-black font-semibold"
+                          >Jenis Kelamin</label
+                        >
+                        <span id="displayGender">Laki-laki</span>
+                      </div>
+                      <button
+                        type="button"
+                        onclick="showInputGender()"
+                        class="link-menu font-semibold"
+                        id="btnShowInputGender"
+                      >
+                        Ubah
+                      </button>
+                    </div>
+                    <div class="hidden mt-2" id="displayInputGender">
+                      <select
+                        name="inputGender"
+                        id="inputGender"
+                        class="w-full p-2 border rounded-md"
+                        value="male"
+                      >
+                        <option value="male">Laki-laki</option>
+                        <option value="female">Perempuan</option>
+                      </select>
+                      <div class="flex justify-end gap-4 py-4">
+                        <button
+                          type="button"
+                          onclick="hideInputGender()"
+                          class="btn-solid-sec w-1/6"
+                        >
+                          Batal
+                        </button>
+                        <button type="submit" class="btn-solid-reg w-1/6">
+                          Simpan
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="py-2 border-b border-gray-300">
+                  <form>
+                    <div class="flex justify-between">
+                      <div class="flex flex-col">
+                        <label
+                          for="inputAddress"
+                          class="text-black font-semibold"
+                          >Alamat</label
+                        >
+                        <span id="displayAddress"
+                          >Jl. User, Desa User, Kecamatan User</span
+                        >
+                      </div>
+                      <button
+                        type="button"
+                        onclick="showInputAddress()"
+                        class="link-menu font-semibold"
+                        id="btnShowInputAddress"
+                      >
+                        Ubah
+                      </button>
+                    </div>
+                    <div class="hidden mt-2" id="displayInputAddress">
+                      <input
+                        type="text"
+                        name="inputAddress"
+                        value="Jl. User, Desa User, Kecamatan User"
+                        id="inputAddress"
+                        class="w-full p-2 border rounded-md"
+                        onfocus="this.setSelectionRange(this.value.length,this.value.length)"
+                      />
+                      <div class="flex justify-end gap-4 py-4">
+                        <button
+                          type="button"
+                          onclick="hideInputAddress()"
+                          class="btn-solid-sec w-1/6"
+                        >
+                          Batal
+                        </button>
+                        <button type="submit" class="btn-solid-reg w-1/6">
+                          Simpan
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
               </div>
               <!-- profile settings option end -->
@@ -275,30 +499,58 @@
           <!-- password settings -->
           <div class="hidden w-full" id="passwordSetting">
             <!-- judul -->
-            <h3 class="pb-10 text-center">Ubah Password</h3>
+            <h1 class="pb-16 text-center">Ubah Password</h1>
             <!-- wrapper password settings -->
             <div class="block">
-              <!-- profile settings option -->
-              <div class="pt-10 md:pt-0">
-                <div class="flex justify-center py-2">
-                  <form class="w-1/2 flex flex-col">
-                    <div class="flex flex-col">
-                      <label for="oldPassword">Password lama</label>
-                      <input type="password" name="password" id="oldPassword" placeholder="Masukan password lama" class="border" />
-                    </div>
-                    <div class="flex flex-col">
-                      <label for="newPassword">Password baru</label>
-                      <input type="password" name="password" id="newPassword" placeholder="Masukan password baru" class="border" />
-                    </div>
-                    <div class="flex flex-col">
-                      <label for="confirmPassword">Konfirmasi password</label>
-                      <input type="password" name="password" id="confirmPassword" placeholder="Masukan konfirmasi password" class="border" />
-                    </div>
-                    <button type="submit" class="btn-solid-reg mx-36">Simpan</button>
-                  </form>
-                </div>
+              <!-- password settings option -->
+              <div class="flex justify-center py-2">
+                <form class="w-full flex flex-col">
+                  <div class="flex flex-col">
+                    <label for="oldPassword" class="text-black font-semibold"
+                      >Password lama</label
+                    >
+                    <input
+                      type="password"
+                      name="oldPassword"
+                      id="oldPassword"
+                      placeholder="Masukan password lama"
+                      class="border rounded-md p-2 my-2"
+                    />
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="newPassword" class="text-black font-semibold"
+                      >Password baru</label
+                    >
+                    <input
+                      type="password"
+                      name="newPassword"
+                      id="newPassword"
+                      placeholder="Masukan password baru"
+                      class="border rounded-md p-2 my-2"
+                    />
+                  </div>
+                  <div class="flex flex-col">
+                    <label
+                      for="confirmPassword"
+                      class="text-black font-semibold"
+                      >Konfirmasi password</label
+                    >
+                    <input
+                      type="password"
+                      name="password"
+                      id="confirmPassword"
+                      placeholder="Masukan konfirmasi password"
+                      class="border rounded-md p-2 my-2"
+                    />
+                  </div>
+                  <div class="flex justify-center">
+                    <button type="submit" class="w-40 btn-solid-reg mt-8">
+                      Simpan
+                    </button>
+                  </div>
+                </form>
               </div>
-              <!-- profile settings option end -->
+              <!-- password settings option end -->
             </div>
             <!-- wrapper password settings end -->
           </div>
@@ -307,16 +559,24 @@
           <!-- profile subscription  -->
           <div class="hidden" id="subscription">
             <!-- judul -->
-            <h3 class="pb-10 text-center">Paket Langganan Pengguna</h3>
+            <h1 class="pb-16 text-center">Paket Langganan Pengguna</h1>
             <!-- subscription list -->
             <div class="flex mb-5 border-b border-gray-300">
               <div class="w-1/2 text-center">
-                <button class="w-full link-border-b-active link-border-b" onclick="btnSubscriptionActiveOn()" id="btnSubscriptionActive">
+                <button
+                  class="w-full link-border-b-active link-border-b"
+                  onclick="btnSubscriptionActiveOn()"
+                  id="btnSubscriptionActive"
+                >
                   <strong>Aktif</strong>
                 </button>
               </div>
               <div class="w-1/2 text-center">
-                <button class="w-full link-border-b" onclick="btnSubscriptionExpiredOn()" id="btnSubscriptionExpired">
+                <button
+                  class="w-full link-border-b"
+                  onclick="btnSubscriptionExpiredOn()"
+                  id="btnSubscriptionExpired"
+                >
                   <strong>Kadaluarsa</strong>
                 </button>
               </div>
@@ -330,25 +590,105 @@
             <!-- active subscription end -->
 
             <div class="flex justify-center mt-28">
-              <button class="text-center btn-solid-reg" onclick="goBuySubscription()">Beli atau perbaharui langganan anda</button>
+              <button
+                class="text-center btn-solid-reg"
+                onclick="goBuySubscription()"
+              >
+                Beli atau perbaharui langganan anda
+              </button>
             </div>
           </div>
           <!-- profile subscription end -->
 
           <!-- subscription packages -->
           <div class="hidden" id="subscriptionPackage">
-            <h3 class="text-center">Beli Paket Berlangganan</h3>
+            <h1 class="pb-16 text-center">Beli Paket Berlangganan</h1>
             <!-- subscription packages list -->
-            <div class="flex justify-center gap-5 mt-10">
-              <div class="flex flex-col w-1/2 gap-2 p-4 border border-gray-300 rounded-xl">
-                <strong class="text-center">Paket A</strong>
-                <p>Ini paket langganan A</p>
-                <a class="text-center btn-solid-sec" href="#">Beli sekarang</a>
+            <div
+              class="flex flex-wrap lg:flex-nowrap justify-center gap-16 lg:gap-5"
+            >
+              <div class="relative lg:w-1/3">
+                <div
+                  class="flex flex-col h-full gap-4 px-4 pt-8 pb-4 border border-gray-300 rounded-xl"
+                >
+                  <h5 class="text-center" style="color: #eb427e">
+                    Premium Non-Fiksi
+                  </h5>
+                  <h5 class="text-center">Rp. 49.999 / 30 hari</h5>
+                  <div>
+                    <p class="text-sm pb-2">
+                      Paket berlangganan premium untuk buku non-fiksi dan sastra
+                    </p>
+                    <ul class="pl-5 pb-8 list-disc text-sm">
+                      <li>
+                        Ribuan bacaan non-fiksi dan sastra terpopuler lokal &
+                        Internasional.
+                      </li>
+                      <li>Bacaan terbaru setiap minggu.</li>
+                      <li>Unduh dan baca kapan saja, bahkan secara offline.</li>
+                    </ul>
+                  </div>
+                </div>
+                <a
+                  class="absolute -bottom-6 left-44 right-44 lg:left-12 lg:right-12 text-center btn-solid-reg"
+                  href="#"
+                  >Beli</a
+                >
               </div>
-              <div class="flex flex-col w-1/2 gap-2 p-4 border border-gray-300 rounded-xl">
-                <strong class="text-center">Paket B</strong>
-                <p>Ini paket langganan B</p>
-                <a class="text-center btn-solid-sec" href="#">Beli sekarang</a>
+              <div class="relative lg:w-1/3">
+                <div
+                  class="flex flex-col h-full gap-4 px-4 pt-8 pb-4 border border-gray-300 rounded-xl"
+                >
+                  <h5 class="text-center" style="color: #eb427e">
+                    Premium Fiksi
+                  </h5>
+                  <h5 class="text-center">Rp. 49.999 / 30 hari</h5>
+                  <div>
+                    <p class="text-sm pb-2">
+                      Paket berlangganan premium untuk buku fiksi dan sastra
+                    </p>
+                    <ul class="pl-5 pb-8 list-disc text-sm">
+                      <li>
+                        Ribuan bacaan fiksi dan sastra terpopuler lokal &
+                        Internasional.
+                      </li>
+                      <li>Bacaan terbaru setiap minggu.</li>
+                      <li>Unduh dan baca kapan saja, bahkan secara offline.</li>
+                    </ul>
+                  </div>
+                </div>
+                <a
+                  class="absolute -bottom-6 left-44 right-44 lg:left-12 lg:right-12 text-center btn-solid-reg"
+                  href="#"
+                  >Beli</a
+                >
+              </div>
+              <div class="relative lg:w-1/3">
+                <div
+                  class="flex flex-col h-full gap-4 px-4 pt-8 pb-4 border border-gray-300 rounded-xl"
+                >
+                  <h5 class="text-center" style="color: #eb427e">
+                    Full Premium
+                  </h5>
+                  <h5 class="text-center">Rp. 99.999 / 30 hari</h5>
+                  <div>
+                    <p class="text-sm pb-2">
+                      Paket berlangganan premium untuk akses semua buku di ebook
+                      store
+                    </p>
+                    <ul class="pl-5 pb-8 list-disc text-sm">
+                      <li>Semua bacaan di premium fiksi.</li>
+                      <li>Semua bacaan di premium non-fiksi.</li>
+                      <li>Bacaan terbaru setiap minggu.</li>
+                      <li>Unduh dan baca kapan saja, bahkan secara offline.</li>
+                    </ul>
+                  </div>
+                </div>
+                <a
+                  class="absolute -bottom-6 left-44 right-44 lg:left-12 lg:right-12 text-center btn-solid-reg"
+                  href="#"
+                  >Beli</a
+                >
               </div>
             </div>
             <!-- subscription packages list end -->
@@ -358,11 +698,15 @@
           <!-- transactions history -->
           <div class="hidden" id="transaction">
             <!-- judul -->
-            <h3 class="pb-10 text-center">Riwayat Transaksi Pengguna</h3>
+            <h1 class="pb-16 text-center">Riwayat Transaksi Pengguna</h1>
             <!-- transaction history list -->
             <div class="flex items-center mb-5 border-b border-gray-300">
               <div class="w-1/4 text-center">
-                <button class="w-full link-border-b-active link-border-b" onclick="btnTransactionAllOn()" id="btnTransactionAll">
+                <button
+                  class="w-full link-border-b-active link-border-b"
+                  onclick="btnTransactionAllOn()"
+                  id="btnTransactionAll"
+                >
                   <strong
                     >Semua<br />
                     Transaksi</strong
@@ -370,7 +714,11 @@
                 </button>
               </div>
               <div class="w-1/4 h-full text-center">
-                <button class="w-full link-border-b" onclick="btnTransactionPendingOn()" id="btnTransactionPending">
+                <button
+                  class="w-full link-border-b"
+                  onclick="btnTransactionPendingOn()"
+                  id="btnTransactionPending"
+                >
                   <strong
                     >Menunggu<br />
                     Pembayaran</strong
@@ -378,7 +726,11 @@
                 </button>
               </div>
               <div class="w-1/4 text-center">
-                <button class="w-full link-border-b" onclick="btnTransactionFailedOn()" id="btnTransactionFailed">
+                <button
+                  class="w-full link-border-b"
+                  onclick="btnTransactionFailedOn()"
+                  id="btnTransactionFailed"
+                >
                   <strong
                     >Transaksi<br />
                     Gagal</strong
@@ -386,7 +738,11 @@
                 </button>
               </div>
               <div class="w-1/4 text-center">
-                <button class="w-full link-border-b" onclick="btnTransactionSuccessOn()" id="btnTransactionSuccess">
+                <button
+                  class="w-full link-border-b"
+                  onclick="btnTransactionSuccessOn()"
+                  id="btnTransactionSuccess"
+                >
                   <strong
                     >Transaksi<br />
                     Sukses</strong
@@ -407,7 +763,7 @@
           <!-- bookmarks -->
           <div class="hidden" id="bookmark">
             <!-- judul -->
-            <h3 class="pb-10 text-center">Markah Buku Pengguna</h3>
+            <h1 class="pb-16 text-center">Markah Buku Pengguna</h1>
             <div class="flex mb-5 border-b border-gray-300">
               <div class="w-full text-center link-border-b-active">
                 <button class="w-full">
@@ -432,7 +788,15 @@
     <!-- Footer -->
     <div class="footer">
       <div class="container px-4 sm:px-8">
-        <h4 class="mb-8 lg:max-w-3xl lg:mx-auto">Pavo is a mobile application for marketing automation and you can reach the team at <a class="text-indigo-600 hover:text-gray-500" href="mailto:email@domain.com">email@domain.com</a></h4>
+        <h4 class="mb-8 lg:max-w-3xl lg:mx-auto">
+          Pavo is a mobile application for marketing automation and you can
+          reach the team at
+          <a
+            class="text-indigo-600 hover:text-gray-500"
+            href="mailto:email@domain.com"
+            >email@domain.com</a
+          >
+        </h4>
         <div class="social-container">
           <span class="fa-stack">
             <a href="#your-link">
@@ -479,9 +843,15 @@
           <li class="mb-2"><a href="terms.html">Terms & Conditions</a></li>
           <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
         </ul>
-        <p class="pb-2 p-small statement">Copyright © <a href="#your-link" class="no-underline">Your name</a></p>
+        <p class="pb-2 p-small statement">
+          Copyright © <a href="#your-link" class="no-underline">Your name</a>
+        </p>
 
-        <p class="pb-2 p-small statement">Distributed by :<a href="https://themewagon.com/" class="no-underline">Themewagon</a></p>
+        <p class="pb-2 p-small statement">
+          Distributed by :<a href="https://themewagon.com/" class="no-underline"
+            >Themewagon</a
+          >
+        </p>
       </div>
 
       <!-- end of container -->
@@ -499,5 +869,6 @@
     <!-- Magnific Popup for lightboxes -->
     <script src="js/scripts.js"></script>
     <!-- Custom scripts -->
+    <script src="js/profile.js"></script>
   </body>
 </html>
