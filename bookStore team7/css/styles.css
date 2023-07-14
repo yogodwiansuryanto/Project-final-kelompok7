@@ -36,6 +36,16 @@ p {
     font: 400 1rem/1.625rem "Open Sans", sans-serif;
 }
 
+#logo-index {
+    width: 160px;
+    height: 80px;
+}
+
+#span-footer {
+    padding: 5px;
+    font-style: italic;
+}
+
 h1 {
     color: #252c38;
     font-weight: 700;
